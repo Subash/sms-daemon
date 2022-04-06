@@ -9,4 +9,4 @@ RUN npm ci
 
 COPY src /app/src
 
-CMD ["node_modules/.bin/forever", "src/app.js"]
+CMD ["./node_modules/.bin/forever", "src/app.js"]

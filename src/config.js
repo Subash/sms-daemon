@@ -1,7 +1,4 @@
-function fromEnv(key) {
-  if (process.env[key]) return process.env[key];
-  throw new Error(`Please set the \`${key}\` environment variable.`);
-}
+import fromEnv from './utils/from-env.js';
 
 export default {
   aws: {

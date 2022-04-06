@@ -25,3 +25,4 @@ app.on('processing_error', (err) => {
 });
 
 app.start();
+console.log('Listening for messages.');
