@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import fromEnv from './utils/from-env.js';
 
 export default {
