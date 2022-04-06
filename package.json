@@ -3,12 +3,13 @@
   "private": "true",
   "type": "module",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "node-dev src/app.js"
   },
   "dependencies": {
     "@sbspk/pocket-sms": "^1.0.0",
     "aws-sdk": "^2.1106.0",
-    "forever": "^4.0.3",
+    "dotenv": "^16.0.0",
     "sqs-consumer": "^5.6.0"
   },
   "devDependencies": {

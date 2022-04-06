@@ -6,6 +6,3 @@ indent_size = 2
 
 [*.js]
 insert_final_newline = true
-
-[Makefile]
-indent_style = tab
