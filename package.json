@@ -7,7 +7,7 @@
     "dev": "node-dev src/app.js"
   },
   "dependencies": {
-    "@sbspk/pocket-sms": "^1.0.0",
+    "@sbspk/pocket-sms": "^2.0.0",
     "aws-sdk": "^2.1106.0",
     "dotenv": "^16.0.0",
     "sqs-consumer": "^5.6.0"

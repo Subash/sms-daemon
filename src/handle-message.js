@@ -7,8 +7,21 @@ const messenger = new Messenger({
   password: config.device.password
 });
 
-export default async function handleMessage(message) {
+async function sendMessage(message) {
   const data = JSON.parse(message.Body);
   console.log(`Sending message to ${data.phone}.`);
-  await messenger.sendSms(data.phone, data.message);
+  await messenger.sendMessage(data.phone, data.message);
+}
+
+async function deleteLastMessage() {
+  const messages = await messenger.getMessages();
+  const message = messages.at(-1);
+  if (!message) return;
+  console.log(`Deleting last message with id ${message.id}.`);
+  await messenger.deleteMessage(message.id);
+}
+
+export default async function handleMessage(message) {
+  await deleteLastMessage();
+  await sendMessage(message);
 }
